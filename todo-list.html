@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="todo-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <!-- Header -->
+            <div class="header">
+                <h1>📝 รายการสิ่งที่ต้องทำ</h1>
+                <p class="subtitle">จัดการงานประจำวันของคุณ</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        placeholder="เพิ่มงานใหม่..." 
+                        class="input-field"
+                    >
+                    <button id="addBtn" class="add-btn">เพิ่ม</button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+                    <button class="filter-btn" data-filter="active">กำลังทำ</button>
+                    <button class="filter-btn" data-filter="completed">เสร็จแล้ว</button>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">ทั้งหมด:</span>
+                    <span id="totalCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">เสร็จแล้ว:</span>
+                    <span id="completedCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">คงเหลือ:</span>
+                    <span id="remainingCount" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <!-- Todo List -->
+            <div class="todo-list-container">
+                <ul id="todoList" class="todo-list"></ul>
+                <div id="emptyState" class="empty-state">
+                    <p>ยังไม่มีงานใดๆ 🎉</p>
+                    <p class="empty-subtitle">เพิ่มงานใหม่เพื่อเริ่มต้น</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="clearCompletedBtn" class="action-btn danger">ลบงานที่เสร็จแล้ว</button>
+                <button id="clearAllBtn" class="action-btn danger">ลบทั้งหมด</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="todo-app.js"></script>
+</body>
+</html>
