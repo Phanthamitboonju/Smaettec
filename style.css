@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont;
+  background: #e5e5e5;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  background: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #06C755;
+  color: white;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name { font-weight: bold; }
+.status { font-size: 12px; }
+
+/* Chat */
+.chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #e5e5e5;
+}
+
+.msg {
+  display: flex;
+  margin: 5px 0;
+}
+
+.msg.user { justify-content: flex-end; }
+
+.bubble {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.user .bubble {
+  background: #06C755;
+  color: white;
+}
+
+.bot .bubble {
+  background: white;
+}
+
+.time {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+/* Typing */
+.typing {
+  padding: 5px 10px;
+  font-size: 12px;
+  display: none;
+}
+
+/* Menu */
+.menu-container {
+  overflow-x: auto;
+  background: #fff;
+}
+
+.menu {
+  display: flex;
+  width: 200%;
+}
+
+.page {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btn {
+  padding: 15px;
+  border: 1px solid #eee;
+  text-align: center;
+}
